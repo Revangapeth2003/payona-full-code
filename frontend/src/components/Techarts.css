@@ -1,0 +1,376 @@
+:root {
+  --text-black: #545151;
+ 
+}
+
+.visatotal {
+  display: flex;
+  scale: 96%;
+  border-radius: 12px;
+  width: 99%;
+  background-color: #e9e7e7;
+  /* background-color: #b1c786; */
+  /* background-color: #e6f4ff; */
+/*   
+   background-color: #b3e0d7;
+  /* background: linear-gradient(135deg, #9a5bb6 0%, #b173c9 50%, #8a3ba3 100%); */
+  /* background: radial-gradient(circle, #b173c9 0%, #9a5bb6 50%, #6e2d8c 100%); */
+   
+}
+
+.visa-hero2 {
+  height: 100%;
+  padding: 6%; 
+  width: 60%;
+}
+.visa-hero2 h1 {
+ 
+  
+  
+}
+
+.gpt {
+  width: 40%;
+  padding: 0.3rem;
+  padding: 1%;
+}
+
+.gpt h1 {
+  text-align: end;
+  margin-left: 20%;
+  scale: 50%;
+  position: relative;
+  left: 15%;
+  visibility: hidden;
+}
+.gptsecond {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  margin-top: 30%;
+  flex-direction: row;
+  justify-content: start;
+  gap: 6%;
+  color: #3a3a3a;
+ 
+}
+.gptsecond h2{
+  font-size: 2.7rem;
+  
+  
+}
+.ritzaimg{
+  width: 30%;
+  height: 30%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: #3a3a3a 3px solid;
+}
+
+.ask-area-container {
+  height: 40%;
+  background-color: #ffffff;
+  padding:1.5%;
+  /* color: #545151; */
+  
+  border-radius: 12px;
+}
+
+.circleavatar {
+  width: 100px;
+  height: 100px;
+  background-color: beige;
+  border-radius: 50%;
+  margin: 0.3rem;
+  border: 4px solid #545151;
+}
+
+.gptform {
+  display: flex;
+  gap: 1rem;
+  scale: 97%;
+  margin-bottom: 2rem;
+}
+
+.gptform input {
+  flex-grow: 1;
+  padding: 0.8rem 1rem;
+  border: 2px solid #545151;
+  border-radius: 20px;
+  font-size: 1rem;
+}
+
+.gptform button {
+  background: #545151;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.gptform button:hover {
+  background: #3a3a3a;
+}
+
+.gpt-output {
+  padding: 1rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.gpt-output p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .gpt {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .gptform {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gptform button {
+    margin-top: 1rem;
+  }
+
+  .gpt .gptsecond{
+    font-size: 1rem;
+    margin-bottom: 10vh;
+  }
+  .gpt .ritzaimg{
+    margin-top: 20%;
+  }
+
+  .gpt h1 {
+    font-size: 1.5rem;
+  }
+}
+
+.visa-hero2text {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  color: #545151;
+}
+
+.visa-hero2text h1 {
+  font-size: 2.1rem;
+ 
+}
+
+.visa-hero2text p {
+  width: 85%;
+}
+
+.visa-threed {
+  
+  top: 9%; 
+  padding: 1%;
+  
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3%;
+  width: 100%;
+}
+
+.visa-cardvisa {
+  perspective: 1000px;
+  width: 100%;
+  height: 220px;
+  cursor: pointer;
+}
+
+.visa-cardvisa-inner {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.gptform{
+   display: none;
+}
+.ask-area-container{
+  display: none;
+}
+.visa-cardvisa:hover .visa-cardvisa-inner {
+  transform: rotateY(180deg);
+}
+
+.visa-cardvisa-front, .visa-cardvisa-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.visa-cardvisa-front {
+  background-size: cover;
+  background-position: center;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.visa-cardvisa-front::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.visa-cardvisa-front h3 {
+  position: relative;
+  z-index: 2;
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.visa-cardvisa-back {
+  background-color: white;
+  color: var(--text-black);
+  transform: rotateY(180deg);
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.visa-cardvisa-back ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.visa-cardvisa-back li {
+  padding: 2px;
+  border-bottom: none; /* Removed underline */
+}
+/* Add this to your CSS */
+@media screen and (max-width: 955px) {
+  .visatotal {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem 0;
+  }
+
+  .visa-hero2 {
+    width: 100%;
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .visa-hero2text h1 {
+    font-size: 1.8rem;
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .visa-threed {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .visa-cardvisa-inner {
+    height: 250px;
+  }
+
+  .visa-cardvisa{
+    height: 250px;
+  }
+  
+
+  .gpt {
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+  }
+  .gptsecond{
+     margin: 0;
+     justify-content: start;
+     display: flex;
+     position: none;
+     margin-top:0;
+     height: 200px;
+  }
+ 
+
+  .gpt h1 {
+    display: none;
+  }
+
+  .gpt h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .gptsecond {
+    justify-content: center;
+    margin-top: 0;
+    width: 100%;
+    height: 10vh;
+    justify-content: start;
+    padding: 0;
+    padding-top: 0;
+  }
+  .gptsecond h2{
+    font-size: 2rem;
+    margin-top: 4rem;
+  }
+  .ask-area-container {
+    
+    max-height: 400px;
+    overflow-y: auto;
+  }
+  .gptform {
+    flex-direction: row;
+    gap: 1%;
+  }
+  .gpt{
+    border-top: 1px solid #545151;
+  }
+  .gptform input {
+    border-radius: 10px;
+    width: 50%;
+  }
+
+  .gptform button {
+   margin:0;
+   padding: 0;
+  }
+  .ask-area-container{
+    height: 35vh;
+  }
+  .ritzaimg{
+     width: 75px;
+     height: 75px;
+  }
+
+}
+

@@ -1,0 +1,100 @@
+/* Updated CSS */
+:root {
+    --dental-blue: #3b3b3b; /* Light blue color */
+  }
+  
+  .dental-hero {
+    width: 95%;
+    border: 1px solid rgb(164, 163, 163);
+    height: 75vh;
+    padding: 5%;
+    margin: 5% 2%;
+    display: flex;
+    background-color: #ffd8d8;
+  }
+  
+  .dental-hero-text {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #545151;
+  }
+  
+  .dental-hero-text h1 {
+    font-size: 3rem;
+  }
+  
+  .dental-hero-text p {
+    width: 85%;
+    margin-top: 5%;
+  }
+  
+  .dental-grid {
+    padding: 1%;
+    height: 100%;
+    width: 65%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4%;
+  }
+  
+  .dental-card {
+    perspective: 1000px;
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  .dental-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 1.5s ease;
+    transform-style: preserve-3d;
+  }
+  
+  .dental-card:hover .dental-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .dental-card-front,
+  .dental-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 15px;
+  }
+  
+  .dental-card-front {
+    background-color: var(--dental-blue);
+    color: white;
+    border-radius: 8px;
+  }
+  
+  .dental-card-back {
+    background-color: white;
+    color: var(--dental-blue);
+    transform: rotateY(180deg);
+    border: 2px solid var(--dental-blue);
+    border-radius: 8px;
+    box-sizing: border-box;
+    overflow-y: auto;
+  }
+  
+  .dental-card-back ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+  
+  .dental-card-back li {
+    margin: 10px 0;
+    font-size: 0.9rem;
+  }

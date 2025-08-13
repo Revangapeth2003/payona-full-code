@@ -1,0 +1,183 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: #1f1f1f;
+  color: #fff;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer-left-group {
+  flex: 3;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  color: white;
+  position: relative;
+}
+
+.footer-section {
+  min-width: 200px;
+  flex: 1;
+}
+
+.footer-section h3 {
+  padding: 5%;
+  border-bottom: 1px solid white;
+  margin-bottom: 3rem;
+}
+
+.footer-section p {
+  font-size: 1.1rem;
+  color: #fff;
+  margin: 0.3rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.footer-section .icon {
+  margin-right: 8px;
+  color: #78B7D0;
+}
+
+/* Push social icons to bottom left */
+
+  
+.fottersocial-icons {
+  height: 50%;
+  margin-top: 1%;
+  flex: 1;
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-template-rows: 2fr 2fr;
+
+  width: fit-content;
+  text-align: center;
+}
+
+.fottersocial-icons a {
+  font-size: 3rem;
+  color: #78B7D0;
+  padding: 1%;
+
+  height: 100%;
+  transition: transform 0.2s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  
+}
+
+.footer-right {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.map-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease;
+}
+
+.map-image:hover {
+  transform: scale(1.05);
+}
+@media     (max-width: 769px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-left-group {
+    width: 100%;
+    position: relative;
+  }
+
+  /* Social icons positioned at bottom of footer content */
+  .social-icons {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+    margin-top: 4rem;
+    gap: 3  rem;
+  }
+
+  .footer-right {
+    margin-bottom: 4rem; /* Space for social icons */
+  }
+
+  .map-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  /* Mobile-friendly section styling */
+  .footer-section {
+    min-width: 100%;
+    width: 100%;
+  }
+
+  .footer-section h3 {
+    padding: 10px 0;
+    font-size: 1.1rem;
+  }
+
+  .footer-section p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    gap: 0.5rem;
+  }
+
+  .social-icons{
+    margin-top: 7%;
+    top: 88%;
+  }
+  .footer-section .icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .map-image {
+    max-width: 250px;
+  }
+
+  .footer-section h3 {
+    font-size: 1rem;
+    padding: 8px 0;
+  }
+
+  .social-icons{
+   
+   
+    margin-top: 7%;
+    
+    top: 88%;
+  }
+  
+ 
+  
+}
+@media (min-width:770px) and (max-width:1040px ) {
+  .social-icons{
+    position: absolute;
+    margin-left: 53%;
+
+  }
+  
+}
